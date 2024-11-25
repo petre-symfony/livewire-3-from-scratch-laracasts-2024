@@ -27,7 +27,7 @@
     </div>
   </form>
   @if($name !== '')
-    <div>
+    <div class="mt-5">
       {{ $greeting }}, {{ $name }}
     </div>
   @endif
