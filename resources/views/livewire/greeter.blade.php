@@ -8,7 +8,7 @@
       <input
         id="newName"
         type="text" class="block w-full p-4 border rounded-md bg-gray-700 text-white"
-        wire:model.live.change="name"
+        wire:model.live.blur="name"
       >
     </div>
 
