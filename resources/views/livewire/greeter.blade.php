@@ -8,7 +8,7 @@
         <option value="Hello">Hello</option>
         <option value="Hi">Hi</option>
         <option value="Hey">Hey</option>
-        <option value="Hoady">Hoady</option>
+        <option value="Hoady" selected>Hoady</option>
       </select>
       <input
         id="newName"
