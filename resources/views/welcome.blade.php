@@ -875,7 +875,7 @@
           <main class="mt-6">
             <div>Hello, Livewire</div>
           </main>
-          
+
         </div>
       </div>
     </div>
