@@ -1,8 +1,4 @@
 <div>
-  <div>
-    {{ $greeting }}, {{ $name }}
-  </div>
-
   <form wire:submit="changeName()">
     <div class="mt-2">
       <select
@@ -30,4 +26,9 @@
       </button>
     </div>
   </form>
+  @if($name !== '')
+    <div>
+      {{ $greeting }}, {{ $name }}
+    </div>
+  @endif
 </div>
