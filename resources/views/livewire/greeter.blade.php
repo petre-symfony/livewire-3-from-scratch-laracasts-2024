@@ -3,11 +3,12 @@
     Hello, {{ $name }}
   </div>
 
-  <form wire:submit="changeName(document.querySelector('#newName').value)">
+  <form wire:submit="changeName()">
     <div class="mt-2">
       <input
         id="newName"
         type="text" class="block w-full p-4 border rounded-md bg-gray-700 text-white"
+        wire:model="name"
       >
     </div>
 
