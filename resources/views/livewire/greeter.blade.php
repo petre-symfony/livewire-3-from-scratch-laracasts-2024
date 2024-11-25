@@ -1,6 +1,6 @@
 <div>
   <div>
-    Hello, {{ $name }}
+    {{ $greeting }}, {{ $name }}
   </div>
 
   <form wire:submit="changeName()">
