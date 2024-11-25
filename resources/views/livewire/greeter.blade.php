@@ -3,7 +3,7 @@
     Hello, {{ $name }}
   </div>
 
-  <form wire:click="changeName(document.querySelector('#newName').value)">
+  <form wire:submit="changeName(document.querySelector('#newName').value)">
     <div class="mt-2">
       <input
         id="newName"
