@@ -5,10 +5,19 @@
 
   <form wire:submit="changeName()">
     <div class="mt-2">
+      <select
+          type="text" class="p-4 border rounded-md bg-gray-700 text-white"
+          wire:model="greeting"
+      >
+        <option value="Hello">Hello</option>
+        <option value="Hi">Hi</option>
+        <option value="Hey">Hey</option>
+        <option value="Hoady">Hoady</option>
+      </select>
       <input
         id="newName"
-        type="text" class="block w-full p-4 border rounded-md bg-gray-700 text-white"
-        wire:model.live.blur="name"
+        type="text" class="p-4 border rounded-md bg-gray-700 text-white"
+        wire:model="name"
       >
     </div>
 
