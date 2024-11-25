@@ -1,3 +1,3 @@
 <div>
-  Hello, Livewire
+  Hello, {{ $name }}
 </div>
