@@ -873,7 +873,7 @@
           </header>
 
           <main class="mt-6">
-            <div>Hello, Livewire</div>
+            <livewire:greeter>
           </main>
 
         </div>
