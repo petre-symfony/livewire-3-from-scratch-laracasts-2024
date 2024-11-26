@@ -10,6 +10,9 @@ class Greeter extends Component {
 	public $greetingMessage = '';
 
 	public function changeGreeting() {
+		$this->validate([
+			'name' => 'required|min:2'
+		]);
 		$this->greetingMessage = "{$this->greeting}, {$this->name}!";
 	}
 
