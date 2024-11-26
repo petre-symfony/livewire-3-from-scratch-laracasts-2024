@@ -14,7 +14,7 @@ class Greeter extends Component {
 	public function mount() {
 
 	}
-	
+
 	public function changeGreeting() {
 		$this->reset('greetingMessage');
 
