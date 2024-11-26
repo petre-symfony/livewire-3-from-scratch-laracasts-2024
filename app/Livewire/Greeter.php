@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Greeting;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -9,10 +10,11 @@ class Greeter extends Component {
 	#[Validate('required|min:2')]
 	public $name = '';
 	public $greeting = '';
+	public $greetings = [];
 	public $greetingMessage = '';
 
 	public function mount() {
-
+		$this->greetings = Greeting::all();
 	}
 
 	public function changeGreeting() {
