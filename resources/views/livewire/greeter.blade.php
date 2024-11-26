@@ -1,5 +1,5 @@
 <div>
-  <form wire:submit="changeName()">
+  <form wire:submit="changeGreeting()">
     <div class="mt-2">
       <select
           type="text" class="p-4 border rounded-md bg-gray-700 text-white"
@@ -28,7 +28,7 @@
   </form>
   @if($name !== '')
     <div class="mt-5">
-      {{ $greeting }}, {{ $name }}
+      {{ $greetingMessage }}
     </div>
   @endif
 </div>
