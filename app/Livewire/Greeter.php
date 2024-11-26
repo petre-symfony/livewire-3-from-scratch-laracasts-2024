@@ -14,7 +14,7 @@ class Greeter extends Component {
 	public function changeGreeting() {
 		$this->reset('greetingMessage');
 
-		//$this->validate();
+		$this->validate();
 
 		$this->greetingMessage = "{$this->greeting}, {$this->name}!";
 	}
