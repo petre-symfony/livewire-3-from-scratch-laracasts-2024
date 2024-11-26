@@ -17,6 +17,12 @@
       >
     </div>
 
+    <div>
+      @error('name')
+        {{ $message }}
+      @enderror
+    </div>
+
     <div class="mt-2">
       <button
           type="submit"
