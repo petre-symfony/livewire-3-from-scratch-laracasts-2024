@@ -8,8 +8,8 @@ use Livewire\Component;
 class ShowArticle extends Component {
 	public $article;
 
-	public function mount($id) {
-		$this->article = Article::findOrFail($id);
+	public function mount(Article $article) {
+		$this->article = $article;
 	}
 	public function render() {
 		return view('livewire.show-article');
