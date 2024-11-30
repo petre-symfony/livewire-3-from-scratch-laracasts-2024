@@ -3,7 +3,7 @@
     <div class="mt-2">
       <input
           type="text" class="p-4 w-9/12 border rounded-md bg-gray-700 text-white"
-          placeholder="Type something to search"
+          placeholder="{{ $placeholder }}"
           wire:model.live.debounce="searchText"
       >
 
