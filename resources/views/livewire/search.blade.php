@@ -8,7 +8,7 @@
       >
 
       <button class="text-white font-medium rounded-md p-4 bg-indigo-600"
-              wire:click="clear()"
+              wire:click.prevent="clear()"
       >
         Clear
       </button>

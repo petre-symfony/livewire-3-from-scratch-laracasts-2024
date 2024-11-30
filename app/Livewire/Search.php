@@ -23,7 +23,7 @@ class Search extends Component {
 	public function clear() {
 		$this->reset('results', 'searchText');
 	}
-	
+
 	public function render() {
 		return view('livewire.search');
 	}
