@@ -13,6 +13,9 @@ class Search extends Component {
 
 	public function updatedSearchText($value) {
 		$this->reset('results');
+
+		$this->validate();
+		
 		$searchTerm = "%{$value}%";
 		$this->results = Article::where('title', 'LIKE', $searchTerm)->get();
 	}
