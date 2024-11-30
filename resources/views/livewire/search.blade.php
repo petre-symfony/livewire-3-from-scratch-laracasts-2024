@@ -7,8 +7,9 @@
           wire:model.live.debounce="searchText"
       >
 
-      <button class="text-white font-medium rounded-md p-4 bg-indigo-600"
+      <button class="text-white font-medium rounded-md p-4 bg-indigo-600 disabled:bg-indigo-400"
               wire:click.prevent="clear()"
+              {{empty($searchText) ? 'disabled' : ''}}
       >
         Clear
       </button>
