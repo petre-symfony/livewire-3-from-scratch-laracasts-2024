@@ -16,5 +16,5 @@
     </div>
   </form>
 
-  <livewire:search-results>
+  <livewire:search-results :results="$results">
 </div>
