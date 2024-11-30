@@ -15,11 +15,15 @@ class Search extends Component {
 		$this->reset('results');
 
 		$this->validate();
-		
+
 		$searchTerm = "%{$value}%";
 		$this->results = Article::where('title', 'LIKE', $searchTerm)->get();
 	}
 
+	public function clear() {
+		$this->reset('results', 'searchText');
+	}
+	
 	public function render() {
 		return view('livewire.search');
 	}
