@@ -1,4 +1,4 @@
-<div>
+<div class="{{ count($results) > 0 ? 'block' : 'hidden' }}">
   <div class="mt-4 p-4 absolute border rounded-md bg-gray-700 border-indigo-600">
     @foreach($results as $result)
       <div class="pt-2">
