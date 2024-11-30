@@ -9,7 +9,7 @@ class ShowArticle extends Component {
 	public $article;
 
 	public function mount($id) {
-		$this->article = Article::find($id);
+		$this->article = Article::findOrFail($id);
 	}
 	public function render() {
 		return view('livewire.show-article');
