@@ -875,7 +875,7 @@
       </div>
     </div>
 
-    <script>
+    <script data-navigate-once>
       console.log('page loaded');
     </script>
   </body>
