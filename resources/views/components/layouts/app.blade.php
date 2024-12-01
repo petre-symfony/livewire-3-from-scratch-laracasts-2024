@@ -848,7 +848,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ $title ?? 'Page Title' }}</title>
   </head>
-  <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+  <body class="font-sans antialiased dark:bg-black dark:text-white/50"
+        x-data x-on:click="$dispatch('search:clear-results')"
+  >
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
       <div
           class="relative flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
