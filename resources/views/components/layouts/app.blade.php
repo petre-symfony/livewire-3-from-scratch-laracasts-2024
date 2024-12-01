@@ -876,9 +876,7 @@
     </div>
 
     <script>
-      document.addEventListener('search:clear-results', function (e) {
-        console.log('cleared results');
-      });
+      console.log('page loaded');
     </script>
   </body>
 </html>
