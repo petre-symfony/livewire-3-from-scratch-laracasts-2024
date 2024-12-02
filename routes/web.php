@@ -13,7 +13,8 @@ Route::get('/', function () {
 Route::get('/', ArticleIndex::class);
 Route::get('/articles/{article}', ShowArticle::class);
 
-Route::middleware([
+/**
+ Route::middleware([
 	'auth:sanctum',
 	config('jetstream.auth_session'),
 	'verified',
@@ -22,3 +23,4 @@ Route::middleware([
 		return view('dashboard');
 	})->name('dashboard');
 });
+ */
