@@ -26,4 +26,12 @@ class ArticleForm extends Form {
 
 		Article::create($this->all());
 	}
+
+	public function update() {
+		$this->validate();
+
+		$this->article->update(
+			$this->only(['title', 'content'])
+		);
+	}
 }
