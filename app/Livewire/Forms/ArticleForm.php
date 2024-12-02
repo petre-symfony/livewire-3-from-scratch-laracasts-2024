@@ -14,6 +14,13 @@ class ArticleForm extends Form {
 	#[Validate('required')]
 	public $content;
 
+	public function setArticle(Article $article) {
+		$this->title = $article->title;
+		$this->content = $article->content;
+
+		$this->article = $article;
+	}
+
 	public function store() {
 		$this->validate();
 
