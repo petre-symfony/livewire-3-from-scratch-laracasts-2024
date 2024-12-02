@@ -24,7 +24,7 @@ class ArticleForm extends Form {
 	public function store() {
 		$this->validate();
 
-		Article::create($this->all());
+		Article::create($this->only(['title', 'content']));
 	}
 
 	public function update() {
