@@ -11,7 +11,9 @@
         <tr wire:key="{{ $article->id }}" class="border-b bg-gray-800 border-gray-700">
           <td class="px-6 py-3">{{ $article->title }}</td>
           <td class="px-6 py-3">
-            <button class="text-gray-200 p-2 bg-red-700 hover:bg-red-900 rounded-sm">
+            <button class="text-gray-200 p-2 bg-red-700 hover:bg-red-900 rounded-sm"
+                    wire:click="delete({{ $article->id }})"
+            >
               Delete
             </button>
           </td>
