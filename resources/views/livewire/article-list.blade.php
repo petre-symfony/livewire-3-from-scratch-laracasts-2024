@@ -8,7 +8,7 @@
     </thead>
     <tbody>
       @foreach($articles as $article)
-        <tr class="border-b bg-gray-800 border-gray-700">
+        <tr wire:key="{{ $article->id }}" class="border-b bg-gray-800 border-gray-700">
 
         </tr>
       @endforeach
