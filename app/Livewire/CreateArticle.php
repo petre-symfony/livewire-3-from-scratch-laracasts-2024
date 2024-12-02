@@ -4,9 +4,8 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Attributes\Validate;
-use Livewire\Component;
 
-class CreateArticle extends Component {
+class CreateArticle extends AdminComponent {
 	#[Validate('required')]
 	public $title;
 	#[Validate('required')]
