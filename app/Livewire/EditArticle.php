@@ -14,9 +14,7 @@ class EditArticle extends AdminComponent {
 	}
 
 	public function save() {
-		$this->validate();
-
-		$this->article->update($this->only(['title', 'content']));
+		$this->form->update();
 
 		$this->redirect('/dashboard/articles', navigate: true);
 	}
