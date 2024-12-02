@@ -2,9 +2,7 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-
-class EditArticle extends Component {
+class EditArticle extends AdminComponent {
 	public function render() {
 		return view('livewire.edit-article');
 	}
