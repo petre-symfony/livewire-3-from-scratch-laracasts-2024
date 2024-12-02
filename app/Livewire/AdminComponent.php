@@ -2,13 +2,12 @@
 
 namespace App\Livewire;
 
-use Livewire\Attributes\Title;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-#[Title('Admin Dashboard')]
+#[Layout('components.layouts.admin')]
 class AdminComponent extends Component {
 	public function render() {
-		return view('livewire.dashboard')
-			->layout('components.layouts.admin');
+		return view('livewire.dashboard');
 	}
 }
