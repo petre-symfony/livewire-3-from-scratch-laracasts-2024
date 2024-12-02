@@ -6,9 +6,8 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Title('Admin Dashboard')]
-class Dashboard extends Component {
+class Dashboard extends AdminComponent {
 	public function render() {
-		return view('livewire.dashboard')
-			->layout('components.layouts.admin');
+		return view('livewire.dashboard');
 	}
 }
