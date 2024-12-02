@@ -17,7 +17,7 @@ class CreateArticle extends Component {
 
 		Article::create($this->all());
 
-		$this->redirect('/dashboard/articles');
+		$this->redirect('/dashboard/articles', navigate: true);
 	}
 
 	public function render() {
