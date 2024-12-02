@@ -13,6 +13,7 @@
           <td class="px-6 py-3">
             <button class="text-gray-200 p-2 bg-red-700 hover:bg-red-900 rounded-sm"
                     wire:click="delete({{ $article->id }})"
+                    wire:confirm="Are yoy sure you want to delete this article?"
             >
               Delete
             </button>

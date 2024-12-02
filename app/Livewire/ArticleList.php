@@ -5,7 +5,7 @@ namespace App\Livewire;
 use App\Models\Article;
 
 class ArticleList extends AdminComponent {
-	
+
 	public function delete(Article $article) {
 		$article->delete();
 	}
