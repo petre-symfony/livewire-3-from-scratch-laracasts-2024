@@ -6,13 +6,6 @@ use App\Models\Article;
 use Livewire\Attributes\Validate;
 
 class EditArticle extends AdminComponent {
-	public ?Article $article;
-
-	#[Validate('required')]
-	public $title;
-	#[Validate('required')]
-	public $content;
-
 	public function mount(Article $article) {
 		$this->title = $article->title;
 		$this->content = $article->content;
