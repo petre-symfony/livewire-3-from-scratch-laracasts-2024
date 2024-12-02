@@ -7,10 +7,7 @@ use Livewire\Attributes\Validate;
 
 class EditArticle extends AdminComponent {
 	public function mount(Article $article) {
-		$this->title = $article->title;
-		$this->content = $article->content;
-
-		$this->article = $article;
+		
 	}
 
 	public function save() {

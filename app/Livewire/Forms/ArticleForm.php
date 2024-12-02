@@ -8,7 +8,7 @@ use Livewire\Form;
 
 class ArticleForm extends Form {
 	public ?Article $article;
-	
+
 	#[Validate('required')]
 	public $title;
 	#[Validate('required')]
