@@ -1,9 +1,10 @@
 <div class="m-auto w-1/2 mb-4">
   <h3 class="text-lg text-gray-200 mb-3">Create Article</h3>
-  <div wire:dirty wire:target="form.title">Form data has not changed</div>
   <form wire:submit="save">
     <div class="mb-3">
-      <label class="block" for="article-title">Title</label>
+      <label class="block" for="article-title">
+        Title<span wire:dirty wire:target="form.title">*</span>
+      </label>
       <input
           type="text"
           class="p-2 w-full border rounded-md bg-gray-700 text-white"
@@ -14,7 +15,9 @@
       </div>
     </div>
     <div class="mb-3">
-      <label class="block" for="article-content">Content</label>
+      <label class="block" for="article-content">
+        Content<span wire:dirty wire:target="form.content">*</span>
+      </label>
       <textarea
           id="article-content"
           class="p-2 w-full border rounded-md bg-gray-700 text-white"
@@ -29,7 +32,7 @@
         <input type="checkbox" name="published" id=""
                class="mr-2" wire:model.boolean="form.published"
         >
-        Published
+        Published<span wire:dirty wire:target="form.published">*</span>
       </label>
     </div>
     <div class="mb-3">
