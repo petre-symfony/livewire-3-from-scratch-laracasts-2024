@@ -10,7 +10,8 @@ return new class extends Migration {
 	 */
 	public function up(): void {
 		Schema::table('articles', function (Blueprint $table) {
-			//
+			$table->boolean('published')->default(false);
+			$table->string('notification')->default('none');
 		});
 	}
 
@@ -19,7 +20,8 @@ return new class extends Migration {
 	 */
 	public function down(): void {
 		Schema::table('articles', function (Blueprint $table) {
-			//
+			$table->dropColumn('published');
+			$table->dropColumn('notification');
 		});
 	}
 };
