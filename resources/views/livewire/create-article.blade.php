@@ -41,6 +41,18 @@
             >
             Email
           </label>
+          <label class="flex items-center">
+            <input type="radio" value="sms" class="mr-2"
+                   wire:model="form.notification"
+            >
+            SMS
+          </label>
+          <label class="flex items-center">
+            <input type="radio" value="none" class="mr-2"
+                   wire:model="form.notification"
+            >
+            None
+          </label>
         </div>
       </div>
     </div>
