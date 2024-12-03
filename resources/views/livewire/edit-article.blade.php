@@ -1,6 +1,6 @@
 <div class="m-auto w-1/2 mb-4">
   <h3 class="text-lg text-gray-200 mb-3">Create Article</h3>
-  <div wire:dirty.remove>Form data has not changed</div>
+  <div wire:dirty wire:target="form.title">Form data has not changed</div>
   <form wire:submit="save">
     <div class="mb-3">
       <label class="block" for="article-title">Title</label>
