@@ -50,22 +50,22 @@
         </div>
         <div class="flex gap-6">
           <label class="flex items-center">
-            <input type="radio" value="email" class="mr-2"
+            <input type="checkbox" value="email" class="mr-2"
                    wire:model="form.notifications"
             >
             Email
           </label>
           <label class="flex items-center">
-            <input type="radio" value="sms" class="mr-2"
+            <input type="checkbox" value="sms" class="mr-2"
                    wire:model="form.notifications"
             >
             SMS
           </label>
           <label class="flex items-center">
-            <input type="radio" value="none" class="mr-2"
+            <input type="checkbox" value="push" class="mr-2"
                    wire:model="form.notifications"
             >
-            None
+            Push
           </label>
         </div>
       </div>
