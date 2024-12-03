@@ -39,6 +39,7 @@
             <input type="radio" value="email" class="mr-2"
                    wire:model="form.notification"
             >
+            Email
           </label>
         </div>
       </div>
