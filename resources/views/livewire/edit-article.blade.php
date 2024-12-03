@@ -36,20 +36,34 @@
         <div class="mb-2">Notification Options</div>
         <div class="flex gap-6">
           <label class="flex items-center">
+            <input type="radio" value="true" class="mr-2"
+                   wire:model="form.notifications"
+            >
+            Yes
+          </label>
+          <label class="flex items-center">
+            <input type="radio" value="false" class="mr-2"
+                   wire:model="form.notifications"
+            >
+            No
+          </label>
+        </div>
+        <div class="flex gap-6">
+          <label class="flex items-center">
             <input type="radio" value="email" class="mr-2"
-                   wire:model="form.notification"
+                   wire:model="form.notifications"
             >
             Email
           </label>
           <label class="flex items-center">
             <input type="radio" value="sms" class="mr-2"
-                   wire:model="form.notification"
+                   wire:model="form.notifications"
             >
             SMS
           </label>
           <label class="flex items-center">
             <input type="radio" value="none" class="mr-2"
-                   wire:model="form.notification"
+                   wire:model="form.notifications"
             >
             None
           </label>
