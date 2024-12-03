@@ -14,8 +14,8 @@ class ArticleForm extends Form {
 	#[Validate('required')]
 	public $content;
 
-	public $published = true;
-	public $notification = 'sms';
+	public $published = false;
+	public $notification = 'none';
 
 	public function setArticle(Article $article) {
 		$this->title = $article->title;
