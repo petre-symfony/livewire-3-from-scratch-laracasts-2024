@@ -37,13 +37,13 @@
         <div class="flex gap-6">
           <label class="flex items-center">
             <input type="radio" value="true" class="mr-2"
-                   wire:model="form.notifications"
+                   wire:model="form.allowNotifications"
             >
             Yes
           </label>
           <label class="flex items-center">
             <input type="radio" value="false" class="mr-2"
-                   wire:model="form.notifications"
+                   wire:model="form.allowNotifications"
             >
             No
           </label>
