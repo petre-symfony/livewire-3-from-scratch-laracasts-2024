@@ -24,6 +24,14 @@
       </div>
     </div>
     <div class="mb-3">
+      <label>
+        <input type="checkbox" name="published" id=""
+               wire:model="published"
+        >
+        Published
+      </label>
+    </div>
+    <div class="mb-3">
       <button
           class="text-gray-200 p-2 bg-indigo-700 hover:bg-indigo-900 rounded-sm"
           type="submit"
