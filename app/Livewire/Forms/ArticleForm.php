@@ -29,14 +29,14 @@ class ArticleForm extends Form {
 	public function store() {
 		$this->validate();
 
-		Article::create($this->only(['title', 'content']));
+		Article::create($this->only(['title', 'content', 'published', 'notification']));
 	}
 
 	public function update() {
 		$this->validate();
 
 		$this->article->update(
-			$this->only(['title', 'content'])
+			$this->only(['title', 'content', 'published', 'notification'])
 		);
 	}
 }
