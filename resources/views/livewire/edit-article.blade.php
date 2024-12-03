@@ -80,6 +80,7 @@
       <button
           class="text-gray-200 p-2 bg-indigo-700 hover:bg-indigo-900 rounded-sm"
           type="submit"
+          disabled
       >
         Save
       </button>
