@@ -2,7 +2,7 @@
   <h3 class="text-lg text-gray-200 mb-3">Create Article</h3>
   <form wire:submit="save">
     <div class="mb-3">
-      <label class="block" for="article-title">
+      <label wire:dirty.class="text-orange-400" wire:target="form.title" class="block" for="article-title">
         Title<span wire:dirty wire:target="form.title">*</span>
       </label>
       <input
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="mb-3">
-      <label class="block" for="article-content">
+      <label wire:dirty.class="text-orange-400" wire:target="form.content" class="block" for="article-content">
         Content<span wire:dirty wire:target="form.content">*</span>
       </label>
       <textarea
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="mb-3">
-      <label class="flex items-center">
+      <label wire:dirty.class="text-orange-400" wire:target="form.published" class="flex items-center">
         <input type="checkbox" name="published" id=""
                class="mr-2" wire:model.boolean="form.published"
         >
@@ -37,7 +37,7 @@
     </div>
     <div class="mb-3">
       <div>
-        <div class="mb-2">
+        <div wire:dirty.class="text-orange-400" wire:target="form.notifications" class="mb-2">
           Notification Options<span wire:dirty wire:target="form.notifications">*</span>
         </div>
         <div class="flex gap-6 mb-3">
