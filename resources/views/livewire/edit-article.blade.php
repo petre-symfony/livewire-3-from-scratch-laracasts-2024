@@ -34,7 +34,7 @@
     <div class="mb-3">
       <div>
         <div class="mb-2">Notification Options</div>
-        <div class="flex gap-6">
+        <div class="flex gap-6 mb-3">
           <label class="flex items-center">
             <input type="radio" value="true" class="mr-2"
                    wire:model="form.allowNotifications"
@@ -48,7 +48,7 @@
             No
           </label>
         </div>
-        <div class="flex gap-6">
+        <div>
           <label class="flex items-center">
             <input type="checkbox" value="email" class="mr-2"
                    wire:model="form.notifications"
