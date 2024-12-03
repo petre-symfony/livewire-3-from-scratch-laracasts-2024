@@ -20,6 +20,8 @@ class ArticleForm extends Form {
 	public function setArticle(Article $article) {
 		$this->title = $article->title;
 		$this->content = $article->content;
+		$this->published = $article->published;
+		$this->notification = $article->notification;
 
 		$this->article = $article;
 	}
