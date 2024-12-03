@@ -37,7 +37,9 @@
     </div>
     <div class="mb-3">
       <div>
-        <div class="mb-2">Notification Options</div>
+        <div class="mb-2">
+          Notification Options<span wire:dirty wire:target="form.notifications">*</span>
+        </div>
         <div class="flex gap-6 mb-3">
           <label class="flex items-center">
             <input type="radio" value="true" class="mr-2"
