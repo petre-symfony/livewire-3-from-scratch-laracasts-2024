@@ -24,9 +24,9 @@
       </div>
     </div>
     <div class="mb-3">
-      <label>
+      <label class="flex items-center">
         <input type="checkbox" name="published" id=""
-               wire:model="published"
+               class="mr-2" wire:model="published"
         >
         Published
       </label>
