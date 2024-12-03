@@ -48,7 +48,7 @@
             No
           </label>
         </div>
-        <div>
+        <div x-show="$wire.form.allowNotifications">
           <label class="flex items-center">
             <input type="checkbox" value="email" class="mr-2"
                    wire:model="form.notifications"
