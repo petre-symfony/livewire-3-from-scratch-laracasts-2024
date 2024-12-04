@@ -16,10 +16,12 @@ class ArticleList extends AdminComponent {
 
 	public function showAll() {
 		$this->showOnlyPublished = false;
+		$this->resetPage();
 	}
 
 	public function showPublished() {
 		$this->showOnlyPublished = true;
+		$this->resetPage();
 	}
 
 	public function render() {
