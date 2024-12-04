@@ -3,8 +3,10 @@
 namespace App\Livewire;
 
 use App\Models\Article;
+use Livewire\WithPagination;
 
 class ArticleList extends AdminComponent {
+	use WithPagination;
 
 	public function delete(Article $article) {
 		$article->delete();
@@ -12,7 +14,7 @@ class ArticleList extends AdminComponent {
 
 	public function render() {
 		return view('livewire.article-list', [
-			'articles' => Article::all()
+			'articles' => Article::paginate(10)
 		]);
 	}
 }
