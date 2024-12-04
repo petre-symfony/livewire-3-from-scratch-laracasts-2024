@@ -15,7 +15,9 @@ class PublishedCount extends Component {
 	}
 
 	public function placeholder() {
-		return '<div>Published count is loaded</div>';
+		return view('livewire.placeholder', [
+			'message' => 'Published count is loading'
+		]);
 	}
 
 	public function render() {
