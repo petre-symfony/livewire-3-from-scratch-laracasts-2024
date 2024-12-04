@@ -4,7 +4,7 @@
        class="text-gray-200 p-2 bg-indigo-700 hover:bg-indigo-900 rounded-sm"
        wire:navigate
     >Create Article</a>
-    <livewire:published-count />
+    <livewire:published-count lazy/>
   </div>
   <table class="w-full">
     <thead class="text-xs uppercase bg-gray-700 text-gray-400">

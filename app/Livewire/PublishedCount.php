@@ -10,7 +10,7 @@ class PublishedCount extends Component {
 
 	public function mount() {
 		sleep(3);
-		
+
 		$this->count = Article::where('published', 1)->count();
 	}
 
