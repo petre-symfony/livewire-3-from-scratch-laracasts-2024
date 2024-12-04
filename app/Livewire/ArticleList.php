@@ -8,8 +8,18 @@ use Livewire\WithPagination;
 class ArticleList extends AdminComponent {
 	use WithPagination;
 
+	public $showOnlyPublished = false;
+
 	public function delete(Article $article) {
 		$article->delete();
+	}
+
+	public function showAll() {
+		$this->showOnlyPublished = false;
+	}
+
+	public function showPublished() {
+		$this->showOnlyPublished = true;
 	}
 
 	public function render() {
