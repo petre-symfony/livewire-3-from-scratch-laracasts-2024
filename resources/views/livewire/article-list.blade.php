@@ -36,6 +36,6 @@
     </tbody>
   </table>
   <div class="mt-3">
-    {{ $articles->links() }}
+    {{ $articles->links(data: ['scrollTo' => false]) }}
   </div>
 </div>
