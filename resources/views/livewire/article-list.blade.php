@@ -9,7 +9,7 @@
         Show All
       </button>
       <button class="text-gray-200 p-2 bg-blue-700 hover:bg-blue-900 rounded-sm">
-        Show Published (<livewire:published-count />)
+        Show Published (<livewire:published-count placeholder-text="loading"/>)
       </button>
     </div>
   </div>
