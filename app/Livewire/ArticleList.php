@@ -23,8 +23,14 @@ class ArticleList extends AdminComponent {
 	}
 
 	public function render() {
+		$query = Article::query();
+
+		if ($this->showOnlyPublished) {
+			$query->where('published', 1);
+		}
+
 		return view('livewire.article-list', [
-			'articles' => Article::paginate(10)
+			'articles' => $query->paginate(10)
 		]);
 	}
 }
