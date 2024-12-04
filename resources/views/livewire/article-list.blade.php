@@ -6,6 +6,9 @@
     >Create Article</a>
     <livewire:published-count />
   </div>
+  <div class="my-3">
+    {{ $articles->links() }}
+  </div>
   <table class="w-full">
     <thead class="text-xs uppercase bg-gray-700 text-gray-400">
       <tr>
@@ -35,7 +38,4 @@
       @endforeach
     </tbody>
   </table>
-  <div class="mt-3">
-    {{ $articles->links() }}
-  </div>
 </div>
