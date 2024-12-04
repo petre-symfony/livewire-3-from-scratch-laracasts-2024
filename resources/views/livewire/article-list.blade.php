@@ -36,6 +36,6 @@
     </tbody>
   </table>
   <div class="mt-3">
-    {{ $articles->links(data: ['scrollTo' => 'table.w-full']) }}
+    {{ $articles->links() }}
   </div>
 </div>
