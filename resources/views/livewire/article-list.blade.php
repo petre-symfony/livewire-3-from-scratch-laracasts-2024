@@ -6,7 +6,7 @@
     >Create Article</a>
     <livewire:published-count />
   </div>
-  <table>
+  <table class="w-full">
     <thead class="text-xs uppercase bg-gray-700 text-gray-400">
       <tr>
         <th class="px-6 py-3">Title</th>
