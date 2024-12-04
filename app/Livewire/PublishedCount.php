@@ -15,7 +15,7 @@ class PublishedCount extends Component {
 	}
 
 	public function placeholder() {
-		return 'Published count is loaded';
+		return '<div>Published count is loaded</div>';
 	}
 
 	public function render() {
