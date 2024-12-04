@@ -16,12 +16,12 @@ class ArticleList extends AdminComponent {
 
 	public function showAll() {
 		$this->showOnlyPublished = false;
-		$this->resetPage();
+		$this->resetPage('articles-page');
 	}
 
 	public function showPublished() {
 		$this->showOnlyPublished = true;
-		$this->resetPage();
+		$this->resetPage('articles-page');
 	}
 
 	public function render() {
@@ -32,7 +32,7 @@ class ArticleList extends AdminComponent {
 		}
 
 		return view('livewire.article-list', [
-			'articles' => $query->paginate(10)
+			'articles' => $query->paginate(10, pageName: 'articles-page')
 		]);
 	}
 }
