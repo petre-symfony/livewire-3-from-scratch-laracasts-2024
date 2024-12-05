@@ -15,7 +15,7 @@ class Search extends Component {
 
 	#[On('search:clear-results')]
 	public function clear() {
-		$this->reset('results', 'searchText');
+		$this->reset('searchText');
 	}
 
 	public function render() {
