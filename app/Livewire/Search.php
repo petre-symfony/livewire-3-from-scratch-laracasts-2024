@@ -4,11 +4,13 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Attributes\On;
+use Livewire\Attributes\Url;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class Search extends Component {
 	#[Validate('required')]
+	#[Url]
 	public $searchText = '';
 	public $results = [];
 	public $placeholder;
