@@ -8,7 +8,7 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class Search extends Component {
-	#[Url(except: '')]
+	#[Url(as: 'q', except: '')]
 	public $searchText = '';
 	public $placeholder;
 
