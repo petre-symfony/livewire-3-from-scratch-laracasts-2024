@@ -8,10 +8,19 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class Search extends Component {
-	#[Url(as: 'q', except: '', history: true)]
+	// #[Url(as: 'q', except: '', history: true)]
 	public $searchText = '';
 	public $placeholder;
 
+	protected function queryString() {
+		return [
+			'searchText' => [
+				'as' => 'q',
+				'history' => true,
+				'except' => ''
+			]
+		];
+	}
 
 	#[On('search:clear-results')]
 	public function clear() {
