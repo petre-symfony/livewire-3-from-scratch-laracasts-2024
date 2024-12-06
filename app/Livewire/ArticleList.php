@@ -11,7 +11,7 @@ class ArticleList extends AdminComponent {
 
 	public $showOnlyPublished = false;
 
-	#[Computed(persist: true)]
+	#[Computed(persist: false)]
 	public function articles() {
 		$query = Article::query();
 
@@ -23,12 +23,12 @@ class ArticleList extends AdminComponent {
 	}
 
 	public function delete(Article $article) {
-		/**if ($this->articles->count() < 10) {
+		if ($this->articles->count() < 10) {
 			throw new \Exception("Nope");
-		}*/
+		}
 
 		$article->delete();
-		//unset($this->articles);
+		unset($this->articles);
 	}
 
 	public function showAll() {
