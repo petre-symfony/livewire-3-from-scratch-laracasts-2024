@@ -40,10 +40,4 @@ class ArticleList extends AdminComponent {
 		$this->showOnlyPublished = true;
 		$this->resetPage('articles-page');
 	}
-
-	public function render() {
-		return view('livewire.article-list', [
-			'articles' => $this->articles
-		]);
-	}
 }
