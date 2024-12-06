@@ -37,14 +37,8 @@ class ArticleList extends AdminComponent {
 	}
 
 	public function render() {
-		$query = Article::query();
-
-		if ($this->showOnlyPublished) {
-			$query->where('published', 1);
-		}
-
 		return view('livewire.article-list', [
-			'articles' => $query->paginate(10, pageName: 'articles-page')
+			'articles' => $this->articles
 		]);
 	}
 }
