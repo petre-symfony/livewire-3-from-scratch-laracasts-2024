@@ -26,8 +26,9 @@ class ArticleList extends AdminComponent {
 		if ($this->articles->count() < 10) {
 			throw new \Exception("Nope");
 		}
-		
+
 		$article->delete();
+		unset($this->articles);
 	}
 
 	public function showAll() {
