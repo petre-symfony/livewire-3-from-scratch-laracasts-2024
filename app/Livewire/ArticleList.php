@@ -23,6 +23,10 @@ class ArticleList extends AdminComponent {
 	}
 
 	public function delete(Article $article) {
+		if ($this->articles->count() < 10) {
+			throw new \Exception("Nope");
+		}
+		
 		$article->delete();
 	}
 
