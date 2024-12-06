@@ -12,7 +12,7 @@ class PublishedCount extends Component {
 	public $count = 0;
 	public $placeholderText = '';
 
-	#[Computed]
+	#[Computed(cache: true, key: 'published-count')]
 	public function count() {
 		sleep(1);
 
