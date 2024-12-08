@@ -29,6 +29,7 @@ class ArticleList extends AdminComponent {
 
 		$article->delete();
 		unset($this->articles);
+		cache()->forget('published-count');
 	}
 
 	public function showAll() {
