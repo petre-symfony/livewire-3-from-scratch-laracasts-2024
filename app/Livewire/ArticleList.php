@@ -10,7 +10,7 @@ use Livewire\WithPagination;
 class ArticleList extends AdminComponent {
 	use WithPagination;
 
-	#[Session]
+	#[Session(key: 'published')]
 	public $showOnlyPublished = false;
 
 	#[Computed(persist: false)]
