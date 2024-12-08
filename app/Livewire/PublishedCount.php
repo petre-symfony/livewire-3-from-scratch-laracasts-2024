@@ -11,7 +11,7 @@ use Livewire\Component;
 class PublishedCount extends Component {
 	public $placeholderText = '';
 
-	#[Computed]
+	#[Computed(cache: true, key: 'published-count')]
 	public function count() {
 		sleep(1);
 
