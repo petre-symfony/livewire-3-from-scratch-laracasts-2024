@@ -6,7 +6,9 @@
     >Create Article</a>
     <div>
       <button @class([
-                'text-gray-200 p-2 hover:bg-blue-900 rounded-sm'
+                'text-gray-200 p-2 hover:bg-blue-900 rounded-sm',
+                'bg-gray-700' => $showOnlyPublished,
+                'bg-blue-700' => !$showOnlyPublished
               ])
               wire:click="togglePublished(false)"
       >
