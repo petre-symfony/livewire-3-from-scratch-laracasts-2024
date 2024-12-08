@@ -12,8 +12,6 @@ class CreateArticle extends AdminComponent {
 	public function save() {
 		$this->form->store();
 
-		$this->redirectIntended('/dashboard');
-
 		$this->redirectRoute('dashboard.articles.index', navigate: true);
 	}
 
