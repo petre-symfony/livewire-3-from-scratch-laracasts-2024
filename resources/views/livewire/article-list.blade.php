@@ -5,7 +5,9 @@
        wire:navigate
     >Create Article</a>
     <div>
-      <button class="text-gray-200 p-2 bg-blue-700 hover:bg-blue-900 rounded-sm"
+      <button @class([
+                'text-gray-200 p-2 hover:bg-blue-900 rounded-sm'
+              ])
               wire:click="togglePublished(false)"
       >
         Show All
