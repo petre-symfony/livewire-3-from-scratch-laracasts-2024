@@ -34,13 +34,8 @@ class ArticleList extends AdminComponent {
 		cache()->forget('published-count');
 	}
 
-	public function showAll() {
-		$this->showOnlyPublished = false;
-		$this->resetPage('articles-page');
-	}
-
-	public function showPublished() {
-		$this->showOnlyPublished = true;
+	public function togglePublished($showOnlyPublished) {
+		$this->showOnlyPublished = $showOnlyPublished;
 		$this->resetPage('articles-page');
 	}
 }
