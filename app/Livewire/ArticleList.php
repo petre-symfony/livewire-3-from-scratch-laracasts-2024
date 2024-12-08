@@ -4,11 +4,13 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\Session;
 use Livewire\WithPagination;
 
 class ArticleList extends AdminComponent {
 	use WithPagination;
 
+	#[Session]
 	public $showOnlyPublished = false;
 
 	#[Computed(persist: false)]
