@@ -16,7 +16,7 @@ class EditArticle extends AdminComponent {
 	public function save() {
 		$this->form->update();
 
-		$this->redirect('/dashboard/articles', navigate: true);
+		$this->redirect(ArticleList::class, navigate: true);
 	}
 
 	public function render() {
