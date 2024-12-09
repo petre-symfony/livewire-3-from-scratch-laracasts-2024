@@ -17,7 +17,7 @@ class ArticleForm extends Form {
 	#[Validate('required')]
 	public $content;
 	#[Validate('image|max:1024')]
-	public $photo;
+	public $photos = [];
 
 	public $published = false;
 	public $notifications = [];
