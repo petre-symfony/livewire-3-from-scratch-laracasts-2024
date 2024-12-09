@@ -16,6 +16,8 @@ class ArticleForm extends Form {
 	public $title;
 	#[Validate('required')]
 	public $content;
+	#[Validate('image|max:1024')]
+	public $photo;
 
 	public $published = false;
 	public $notifications = [];
@@ -42,6 +44,7 @@ class ArticleForm extends Form {
 			$this->notifications = [];
 		}
 
+		
 		Article::create($this->only(['title', 'content', 'published', 'notifications']));
 
 		cache()->forget('published-count');
@@ -52,6 +55,10 @@ class ArticleForm extends Form {
 
 		if (!$this->allowNotifications) {
 			$this->notifications = [];
+		}
+
+		if ($this->photo) {
+			$this->photo_path = $this->photo->storePublicly('article_photos', ['disk' => 'public']);
 		}
 
 		$this->article->update(
