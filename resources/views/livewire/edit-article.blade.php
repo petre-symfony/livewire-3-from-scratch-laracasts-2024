@@ -31,9 +31,16 @@
       <label class="block" for="article-content">
         Photo
       </label>
-      <input type="file"
-             wire:model="form.photo"
-      >
+      <div class="flex items-center">
+        <input type="file"
+               wire:model="form.photo"
+        >
+        <div>
+          @if ($form->photo_path)
+            <img class="w-1/2" src="{{ \Illuminate\Support\Facades\Storage::url($form->photo_path) }}" alt="">
+          @endif
+        </div>
+      </div>
       <div>
         @error('photo') <span class="text-red-600">{{ $message }}</span> @enderror
       </div>
