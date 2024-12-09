@@ -8,6 +8,7 @@ use Livewire\Form;
 
 class ArticleForm extends Form {
 	public ?Article $article;
+	public int $id;
 
 	#[Validate('required')]
 	public $title;
@@ -19,6 +20,7 @@ class ArticleForm extends Form {
 	public $allowNotifications = false;
 
 	public function setArticle(Article $article) {
+		$this->id = $article->id;
 		$this->title = $article->title;
 		$this->content = $article->content;
 		$this->published = $article->published;
