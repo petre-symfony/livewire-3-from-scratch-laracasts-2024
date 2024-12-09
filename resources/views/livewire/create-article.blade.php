@@ -30,7 +30,6 @@
       <div class="flex items-center">
         <input type="file"
                wire:model="form.photo"
-               multiple
         >
         <div>
           @if ($form->photo)

@@ -16,7 +16,7 @@ class ArticleForm extends Form {
 	public $title;
 	#[Validate('required')]
 	public $content;
-	#[Validate(['photo.*' => 'image|max:1024'])]
+	#[Validate('image|max:1024')]
 	public $photo = [];
 
 	public $published = false;
@@ -42,10 +42,6 @@ class ArticleForm extends Form {
 
 		if (!$this->allowNotifications) {
 			$this->notifications = [];
-		}
-
-		foreach ($this->photo as $photo) {
-			...
 		}
 
 		if ($this->photo) {
