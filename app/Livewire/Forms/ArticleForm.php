@@ -20,6 +20,7 @@ class ArticleForm extends Form {
 	public $published = false;
 	public $notifications = [];
 	public $allowNotifications = false;
+	public $photo_path = '';
 
 	public function setArticle(Article $article) {
 		$this->id = $article->id;
@@ -27,6 +28,7 @@ class ArticleForm extends Form {
 		$this->content = $article->content;
 		$this->published = $article->published;
 		$this->notifications = $article->notifications ?? [];
+		$this->photo_path = $article->photo_path;
 
 		$this->allowNotifications = count($this->notifications) > 0;
 
