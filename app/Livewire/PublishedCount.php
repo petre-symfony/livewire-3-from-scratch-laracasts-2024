@@ -7,11 +7,12 @@ use Livewire\Attributes\Computed;
 use Livewire\Attributes\Lazy;
 use Livewire\Component;
 
-#[Lazy]
+#[Lazy(isolate: false)]
 class PublishedCount extends Component {
 	public $placeholderText = '';
 
-	#[Computed(cache: true, key: 'published-count')]
+	#[Computed(cache: true, key: 'published-count
+	')]
 	public function count() {
 		sleep(1);
 
