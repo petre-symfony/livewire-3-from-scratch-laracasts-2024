@@ -36,7 +36,9 @@
                wire:model="form.photo"
         >
         <div>
-          @if ($form->photo_path)
+          @if ($form->photo)
+            <img class="w-1/2" src="{{ $form->photo->temporaryUrl() }}" alt="">
+          @elseif ($form->photo_path)
             <img class="w-1/2" src="{{ \Illuminate\Support\Facades\Storage::url($form->photo_path) }}" alt="">
           @endif
         </div>
