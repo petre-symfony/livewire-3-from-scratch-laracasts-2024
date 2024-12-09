@@ -44,8 +44,11 @@ class ArticleForm extends Form {
 			$this->notifications = [];
 		}
 
-		
-		Article::create($this->only(['title', 'content', 'published', 'notifications']));
+		if ($this->photo) {
+			$this->photo_path = $this->photo->storePublicly('article_photos', ['disk' => 'public']);
+		}
+
+		Article::create($this->only(['title', 'content', 'published', 'notifications', 'photo_path']));
 
 		cache()->forget('published-count');
 	}
@@ -62,7 +65,7 @@ class ArticleForm extends Form {
 		}
 
 		$this->article->update(
-			$this->only(['title', 'content', 'published', 'notifications'])
+			$this->only(['title', 'content', 'published', 'notifications', 'photo_path'])
 		);
 
 		cache()->forget('published-count');
