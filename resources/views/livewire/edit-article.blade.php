@@ -28,6 +28,17 @@
       </div>
     </div>
     <div class="mb-3">
+      <label class="block" for="article-content">
+        Photo
+      </label>
+      <input type="file"
+             wire:model="form.photo"
+      >
+      <div>
+        @error('photo') <span class="text-red-600">{{ $message }}</span> @enderror
+      </div>
+    </div>
+    <div class="mb-3">
       <label wire:dirty.class="text-orange-400" wire:target="form.published" class="flex items-center">
         <input type="checkbox" name="published" id=""
                class="mr-2" wire:model.boolean="form.published"
