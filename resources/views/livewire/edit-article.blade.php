@@ -91,9 +91,6 @@
       <button
           class="text-gray-200 p-2 bg-blue-700 rounded-sm disabled:opacity-75 disabled:bg-blue-300"
           type="submit"
-          wire:dirty.class="hover:bg-blue-900"
-          wire:dirty.remove.attr="disabled"
-          disabled
       >
         Save
       </button>
