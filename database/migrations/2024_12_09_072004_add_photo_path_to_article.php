@@ -10,7 +10,7 @@ return new class extends Migration {
 	 */
 	public function up(): void {
 		Schema::table('articles', function (Blueprint $table) {
-			//
+			$table->string('photo_path')->nullable();
 		});
 	}
 
@@ -19,7 +19,7 @@ return new class extends Migration {
 	 */
 	public function down(): void {
 		Schema::table('articles', function (Blueprint $table) {
-			//
+			$table->dropColumn('photo_path');
 		});
 	}
 };
