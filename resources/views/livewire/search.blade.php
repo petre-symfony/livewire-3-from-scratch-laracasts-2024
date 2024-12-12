@@ -11,7 +11,7 @@
   </form>
 
   @if(!empty($searchText))
-    <div wire:transition.scale.origin.top.left>
+    <div wire:transition>
       <livewire:search-results :results="$results">
     </div>
   @endif
