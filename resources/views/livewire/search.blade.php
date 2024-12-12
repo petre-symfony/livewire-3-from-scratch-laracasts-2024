@@ -10,5 +10,7 @@
     </div>
   </form>
 
-  <livewire:search-results :results="$results" :show="!empty($searchText)">
+  @if
+    <livewire:search-results :results="$results" :show="!empty($searchText)">
+  @endif
 </div>
