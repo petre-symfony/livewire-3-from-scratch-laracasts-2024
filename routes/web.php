@@ -18,6 +18,11 @@ Route::get('/', function () {
 Route::get('/', ArticleIndex::class)->name('home');
 Route::get('/articles/{article}', ShowArticle::class);
 Route::get('/login', Login::class)->name('login');
+Route::get('logout', function () {
+	Auth::logout();
+
+	return redirect()->route('home');
+});
 
 Route::middleware([
 	'auth'
