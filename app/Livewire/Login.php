@@ -2,9 +2,11 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
+#[Title('login')]
 class Login extends Component {
 	#[Validate('required|email')]
 	public $email = '';
