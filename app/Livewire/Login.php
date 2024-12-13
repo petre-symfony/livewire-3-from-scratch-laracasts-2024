@@ -10,6 +10,20 @@ class Login extends Component {
 	public $email = '';
 	public $password = '';
 
+	public $loginMessage = '';
+
+	public function authenticate() {
+		$this->validate();
+
+		$valid = \Auth::attempt(['email' => $this->email, 'password' => $this->password]);
+
+		if ($valid) {
+			$this->redirectIntended('/dashboard');
+		} else {
+			$this->loginMessage = 'Incorrect email or/and password';
+		}
+	}
+
 	public function render() {
 		return view('livewire.login');
 	}
